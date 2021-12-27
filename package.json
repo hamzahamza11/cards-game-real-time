@@ -21,6 +21,7 @@
     "babel-preset-env": "^1.7.0",
     "concurrently": "^6.5.1",
     "express": "^4.17.2",
+    "path": "^0.12.7",
     "socket.io": "^4.4.0"
   }
 }

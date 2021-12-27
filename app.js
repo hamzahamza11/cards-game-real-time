@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const http = require("http");
+const path = require('path')
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
@@ -79,11 +80,8 @@ if (process.env.NODE_ENV === 'production') {
 
 const PORT = process.env.PORT || 8080;
 
-app.listen( PORT ,(err)=>{
-  if(err){
-      console.log(err);
-  }
-  console.log("app is running"+PORT);
-})
+server.listen(PORT, () => {
+  console.log("listening on *:8080");
+});
 
 
