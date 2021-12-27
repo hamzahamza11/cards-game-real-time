@@ -89,6 +89,6 @@ app.listen(PORT,(err)=>{
   console.log("app is running"+PORT);
 })
 
-server.listen(8080, () => {
+server.listen(PORT, () => {
   console.log("listening on *:8080");
 });
