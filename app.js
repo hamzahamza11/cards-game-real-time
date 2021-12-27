@@ -81,7 +81,7 @@ if (process.env.NODE_ENV === 'production') {
 const PORT = process.env.PORT || 8080;
 
 server.listen(PORT, () => {
-  console.log("listening on *:8080");
+  console.log("listening on");
 });
 
 
