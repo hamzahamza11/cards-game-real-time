@@ -74,9 +74,10 @@ io.on("connection", (socket) => {
 
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
-  app.get('*', function (req, res) {
-    const index = path.join(__dirname, 'build', 'index.html');
-    res.sendFile(index);
+  app.use(express.static('./frontend/build'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
   });
 }
 const PORT = process.env.PORT || 8080;
